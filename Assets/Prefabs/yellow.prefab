@@ -12,8 +12,8 @@ GameObject:
   - 61: {fileID: 6186292}
   - 114: {fileID: 11429860}
   m_Layer: 0
-  m_Name: 1 hit
-  m_TagString: Untagged
+  m_Name: yellow
+  m_TagString: Breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +52,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16e4f64030d6e7e4fa1b08385b4756a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHits: 1
   hitSprites: []
 --- !u!212 &21286292
 SpriteRenderer:
