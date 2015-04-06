@@ -13,7 +13,6 @@ public class Ball : MonoBehaviour {
 	void Start () {
 		paddle = GameObject.FindObjectOfType<Paddle>();
 		paddleToBallVector = this.transform.position - paddle.transform.position;
-	
 	}
 	
 	// Update is called once per frame
@@ -32,7 +31,15 @@ public class Ball : MonoBehaviour {
 		
 	}
 	
-	
+	void OnCollisionEnter2D (Collision2D collision) {
+		// Ball does not trigger sound when brick is destroyed
+		Vector2 tweak = new Vector2 (Random.Range (0f, 0.2f), Random.Range(0f, 0.2f));
+		if (hasStarted) {
+			audio.Play ();
+			rigidbody2D.velocity += tweak;
+		}
+
+	}
 	
 	
 }
